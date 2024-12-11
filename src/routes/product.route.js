@@ -17,7 +17,7 @@ const productRouter = express.Router();
 
 productRouter.post("/add-product", auth, addProduct)
 
-productRouter.put("/update-product", auth, updateProduct)
+productRouter.post("/update-product", auth, updateProduct)
 
 productRouter.get("/get-all-product", getAllProduct)
 

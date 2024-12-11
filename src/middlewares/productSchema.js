@@ -7,10 +7,9 @@ const productSchema = Yup.object({
     quantity: Yup.number().typeError("Invalid quantity").min(1, "Quantity should be greater than 1").required("Invalid quantity"),
     MRP: Yup.number().typeError("Please select valid MRP").required("MRP is required"),
     discount: Yup.number().typeError("Please select valid Selling Price").required("Selling Price is required"),
-    productImage: Yup.string().default(null)
+    productImage: Yup.string().required("Product Image is required")
 })
 export { productSchema }
-
 
 
 

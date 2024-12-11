@@ -6,7 +6,7 @@ const auth = async (req, res, next) => {
         let token = req.headers.authorization;
         console.log("token :", token)
         if (!token || token == 0) {
-            res.status(200).json(new apiResponse("unauthorized access", false, null))
+           return res.status(200).json(new apiResponse("unauthorized access", false, null))
         }
         token = token.split(' ')[1];
 
