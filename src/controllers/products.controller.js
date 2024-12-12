@@ -109,6 +109,10 @@ const getAllProduct = async (req, res, next) => {
             where: {
                 created_by: data?.created_by ?? 0
             }
+        },{
+            order: [
+              ['created_on', 'DESC']
+            ]
         })
         if (!getAll) {
             return next(new ApiRespose(statusCode.notFound))

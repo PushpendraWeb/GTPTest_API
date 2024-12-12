@@ -113,7 +113,8 @@ const profile = async (req, res, next) => {
         const products = jsonFormator(await ProductsModal.findAll({
             where: {
                 created_by: req.user.id
-            }
+            },
+            order: [[["created_on", "DESC"]]],
         }));
 
         res.status(statusCode.ok).json(new ApiRespose("User profile", true, { user, products }))
