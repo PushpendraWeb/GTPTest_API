@@ -7,7 +7,6 @@ const userRouter = express.Router();
 userRouter.post('/user/login', login)
 userRouter.post('/user/register', register)
 userRouter.get('/user/profile', auth, profile)
-
 userRouter.post('/user/profile/update', auth, updateProfile)
 userRouter.get('/users', users)
 userRouter.get('/users/:id', sellerById)
