@@ -28,7 +28,7 @@ productRouter.post("/update-product-quentity", updateQuentity)
 
 
 productRouter.post("/upload-image", upload.single('file'), (req, res) => {
-    res.send(`File uploaded successfully: ${req.file.filename}`);
+    res.send({image:req.file.filename});
 });
 
 export default productRouter
